@@ -19,7 +19,7 @@ function Main() {
                 />
                 <NavigationBar
                     image={earth}
-                    title="otheruserpic"
+                    title="otherpic"
                     navigationdirection="Andere gebruiker"
                 />
                 <NavigationBar

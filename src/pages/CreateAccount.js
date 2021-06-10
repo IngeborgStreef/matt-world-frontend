@@ -1,5 +1,6 @@
 import React from "react";
 import matt from '../assets/matt.png';
+import arrowleft from '../assets/arrowleft.png'
 
 function CreateAccount() {
     function onFormSubmit(e) {
@@ -8,68 +9,76 @@ function CreateAccount() {
     }
 
     return (
-        <main className="mainpagecontainerForm">
-            <aside className="matt">
-                <img src={matt} alt="Matt"/>
-            </aside>
+        <>
+            <main className="mainpagecontainerForm">
+                <aside className="matt">
+                    <img src={matt} alt="Matt"/>
+                </aside>
 
-            <form onSubmit={onFormSubmit} className="newUserForm">
-                <h1>Nieuwe gebruiker</h1>
+                <form onSubmit={onFormSubmit} className="newUserForm">
+                    <h1>Nieuwe gebruiker</h1>
 
-                <legend>
-                    <legend>Informatie ouder</legend>
+                    <legend>
+                        <legend>Informatie ouder</legend>
 
-                    <label htmlFor="parent-name">
-                        Naam ouder:
-                        <input type="text"
-                               name="name"
-                               id="details-parent-name"
-                        />
-                    </label>
+                        <label htmlFor="parent-name">
+                            Naam ouder:
+                            <input type="text"
+                                   name="name"
+                                   id="details-parent-name"
+                            />
+                        </label>
 
-                    <label htmlFor="email">
-                        E-mail adres:
-                        <input type="text"
-                               name="e-mail"
-                               id="e-mail"
-                        />
-                    </label>
+                        <label htmlFor="email">
+                            E-mail adres:
+                            <input type="text"
+                                   name="e-mail"
+                                   id="e-mail"
+                            />
+                        </label>
 
-                    <label htmlFor="password">
-                        Wachtwoord:
-                        <input type="text"
-                               name="password"
-                               id="password"
-                        />
-                    </label>
+                        <label htmlFor="password">
+                            Wachtwoord:
+                            <input type="text"
+                                   name="password"
+                                   id="password"
+                            />
+                        </label>
 
-                </legend>
+                    </legend>
 
-                <legend>
-                    <legend>Informatie kind</legend>
-                    <label htmlFor="kid-name">
-                        Naam kind:
-                        <input type="text"
-                               name="name"
-                               id="details-kid-name"
-                        />
-                    </label>
+                    <legend>
+                        <legend>Informatie kind</legend>
+                        <label htmlFor="kid-name">
+                            Naam kind:
+                            <input type="text"
+                                   name="name"
+                                   id="details-kid-name"
+                            />
+                        </label>
 
-                    <label htmlFor="details-age">
-                        Leeftijd kind:
-                        <input type="text"
-                               name="age"
-                               id="details-age"
-                        />
-                    </label>
-                </legend>
+                        <label htmlFor="details-age">
+                            Leeftijd kind:
+                            <input type="text"
+                                   name="age"
+                                   id="details-age"
+                            />
+                        </label>
+                    </legend>
 
-                <button type="submit" className="button">
-                    Versturen
+                    <button type="submit" className="button">
+                        Versturen
+                    </button>
+
+                </form>
+            </main>
+
+            <footer className="arrow">
+                <button>
+                    <img src="arrowleft" alt="arrowleft"/>
                 </button>
-
-            </form>
-        </main>
+            </footer>
+        </>
     );
 }
 
