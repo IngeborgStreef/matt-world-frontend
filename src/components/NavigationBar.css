@@ -1,0 +1,14 @@
+button {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: black;
+}
+
+.navigation-bar img {
+    width: 40px;
+    height: 40px;
+}

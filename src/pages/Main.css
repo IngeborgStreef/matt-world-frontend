@@ -1,0 +1,21 @@
+#root, body, html, .App{
+    height: 100%;
+}
+
+.mainpagecontainer {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-template-areas:
+    "matt navigation";
+}
+
+.matt {
+    grid-area: matt;
+}
+
+.navigation {
+    grid-area: navigation;
+}
