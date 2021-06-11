@@ -1,8 +1,14 @@
 import React from "react";
 import matt from '../assets/matt.png';
 import arrowleft from '../assets/arrowleft.png'
+import {useHistory} from "react-router-dom";
 
 function CreateAccount() {
+    // const history = useHistory();
+    // function handleClick() {
+    //     history.push("/main");
+    // }
+
     function onFormSubmit(e) {
         e.preventDefault();
         console.log("submitted");
