@@ -1,0 +1,9 @@
+.somecontainer {
+    display: flex;
+    align-items: center;
+}
+
+.informationdetails {
+    display: flex;
+    flex-direction: column;
+}
