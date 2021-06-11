@@ -1,0 +1,12 @@
+.game-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas:
+    "awnser-a road awnser-b"
+    ". question ."
+    "awnser-c road awnser-d";
+}

@@ -13,6 +13,8 @@ import AdminAiden from "./pages/admin/AdminAiden";
 import AdminElliot from "./pages/admin/AdminElliot";
 import './pages/admin/AdminKidStyling.css';
 import Goals from "./pages/admin/Goals"
+import ShapeGame from './pages/ShapeGame';
+import './pages/ShapeGame.css';
 
 import NavigationBar from "./components/NavigationBar";
 import './components/NavigationBar.css'
@@ -23,6 +25,8 @@ import './components/AdminNavigation.css';
 import Reading from "./components/Reading";
 import './components/Reading.css';
 import Shop from "./pages/admin/Shop";
+import AwnserButton from "./components/AwnserButton";
+import './components/AwnserButton.css';
 
 function App() {
   return (
@@ -37,6 +41,8 @@ function App() {
       {/*<Reading />*/}
       {/*<Shop />*/}
       {/*<AdminNavigation />*/}
+      <ShapeGame />
+      {/*<AwnserButton />*/}
     </div>
   );
 }
