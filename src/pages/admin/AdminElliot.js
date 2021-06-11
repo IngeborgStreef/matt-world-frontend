@@ -3,7 +3,8 @@ import AdminNavigation from "../../components/AdminNavigation";
 import book from '../../assets/book.png';
 import Reading from "../../components/Reading";
 
-function AdminAiden() {
+
+function AdminElliot() {
     return (
         <>
             <header>
@@ -30,4 +31,4 @@ function AdminAiden() {
     );
 }
 
-export default AdminAiden;
+export default AdminElliot;

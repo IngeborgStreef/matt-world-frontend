@@ -10,7 +10,9 @@ import './pages/CreateAccount.css';
 import OtherAccount from "./pages/OtherAccount";
 import './pages/OtherAccount.css';
 import AdminAiden from "./pages/admin/AdminAiden";
-import './pages/admin/AdminAiden.css';
+import AdminElliot from "./pages/admin/AdminElliot";
+import './pages/admin/AdminKidStyling.css';
+import Goals from "./pages/admin/Goals"
 
 import NavigationBar from "./components/NavigationBar";
 import './components/NavigationBar.css'
@@ -20,6 +22,7 @@ import AdminNavigation from "./components/AdminNavigation";
 import './components/AdminNavigation.css';
 import Reading from "./components/Reading";
 import './components/Reading.css';
+import Shop from "./pages/admin/Shop";
 
 function App() {
   return (
@@ -28,8 +31,12 @@ function App() {
       {/*<Main />*/}
       {/*<CreateAccount />*/}
       {/*<OtherAccount />*/}
-      <AdminAiden />
+      {/*<AdminAiden />*/}
+      {/*<AdminElliot />*/}
+      {/*<Goals />*/}
       {/*<Reading />*/}
+      {/*<Shop />*/}
+      {/*<AdminNavigation />*/}
     </div>
   );
 }
