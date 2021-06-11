@@ -31,18 +31,7 @@ import './components/AwnserButton.css';
 function App() {
   return (
     <div className="App">
-      {/*<Intro />*/}
-      {/*<Main />*/}
-      {/*<CreateAccount />*/}
-      {/*<OtherAccount />*/}
-      {/*<AdminAiden />*/}
-      {/*<AdminElliot />*/}
-      {/*<Goals />*/}
-      {/*<Reading />*/}
-      {/*<Shop />*/}
-      {/*<AdminNavigation />*/}
-      <ShapeGame />
-      {/*<AwnserButton />*/}
+
     </div>
   );
 }
