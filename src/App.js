@@ -24,11 +24,10 @@ import ShapeGame from './pages/ShapeGame';
 import './pages/ShapeGame.css';
 import WorldMap from "./pages/WorldMap";
 import Book from "./pages/book/Book"
-import LeftPage from "./pages/book/LeftPage";
-import RightPage from "./pages/book/RightPage";
 import './pages/book/Book.css'
 import './pages/book/some.css'
-import BothPages from "./pages/book/BothPages";
+import RomanEmpire from "./pages/book/RomanEmpire"
+import Emperors from "./pages/book/Emperors";
 
 
 //Assets
@@ -47,33 +46,40 @@ import './components/AwnserButton.css';
 
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/">
-                    <Intro/>
-                </Route>
-
-                <Route path="/main">
-                    <Main />
-                </Route>
-
-                <Route path="/create-account">
-                    <CreateAccount />
-                </Route>
-
-                <Route path="/other-user">
-                    <OtherAccount />
-                </Route>
-
-                <Route path="/world-map">
-                    <WorldMap />
-                </Route>
-
-                <Route path="/book">
-                    <Book />
-                </Route>
-            </Switch>
-        </Router>
+        <>
+            <Emperors />
+            </>
+        // <Router>
+        //     <Switch>
+        //         <Route exact path="/">
+        //             <Intro/>
+        //         </Route>
+        //
+        //         <Route path="/main">
+        //             <Main />
+        //         </Route>
+        //
+        //         <Route path="/create-account">
+        //             <CreateAccount />
+        //         </Route>
+        //
+        //         <Route path="/other-user">
+        //             <OtherAccount />
+        //         </Route>
+        //
+        //         <Route path="/world-map">
+        //             <WorldMap />
+        //         </Route>
+        //
+        //         <Route path="/book">
+        //             <Book />
+        //         </Route>
+        //
+        //         <Route path="roman-empire">
+        //             <RomanEmpire />
+        //         </Route>
+        //     </Switch>
+        // </Router>
     );
 }
 
