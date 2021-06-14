@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookcontainer {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bookPages {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    height: 500px;
+}
+
+.leftPage {
+    width: 80%;
+    height: 80%;
+}
+
+.fullSize{
+    width: 80%;
+    height: 80%;
+}
+
+.right-page {
+    display: grid;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
+}
+
+#imageOne {
+    grid-area: a;
+}
+
+#imageTwo {
+    grid-area: b;
+}
+
+#imageThree {
+    grid-area: c;
+}
+
+#imageFour {
+    grid-area: d;
+}
+
+#imageFive {
+    grid-area: e;
+}
+
+#imageSix {
+    grid-area: f;
+}
+
+#imageSeven {
+    grid-area: g;
+}
+
+#imageEight {
+    grid-area: h;
+}
+
+#imageNine {
+    grid-area: i;
+}

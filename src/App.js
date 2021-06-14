@@ -5,7 +5,9 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import { useform } from 'react-hook-form'
 
+//Pages
 import Intro from './pages/Intro';
 import './pages/Intro.css';
 import Main from './pages/Main';
@@ -21,8 +23,15 @@ import Goals from "./pages/admin/Goals"
 import ShapeGame from './pages/ShapeGame';
 import './pages/ShapeGame.css';
 import WorldMap from "./pages/WorldMap";
-import Book from "./pages/Book";
+import Book from "./pages/book/Book"
+import LeftPage from "./pages/book/LeftPage";
+import RightPage from "./pages/book/RightPage";
+import './pages/book/Book.css'
+import './pages/book/some.css'
+import BothPages from "./pages/book/BothPages";
 
+
+//Assets
 import NavigationBar from "./components/NavigationBar";
 import './components/NavigationBar.css'
 import ProfilePicture from "./components/ProfilePicture";
@@ -34,6 +43,7 @@ import './components/Reading.css';
 import Shop from "./pages/admin/Shop";
 import AwnserButton from "./components/AwnserButton";
 import './components/AwnserButton.css';
+// import Book from "./pages/book/Book";
 
 function App() {
     return (

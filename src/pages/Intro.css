@@ -4,7 +4,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    background-color: #C0C7D8;
+    /*background-color: #C0C7D8;*/
     border-style: solid;
     border-width: 3px;
     border-color: #434C68;

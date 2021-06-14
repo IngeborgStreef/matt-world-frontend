@@ -2,6 +2,8 @@ import React from "react";
 import matt from '../assets/matt.png';
 import arrowleft from '../assets/arrowleft.png'
 import {useHistory} from "react-router-dom";
+import {User} from "../models/User";
+import {UserService} from "../services/UserService";
 
 function CreateAccount() {
     // const history = useHistory();
@@ -9,9 +11,15 @@ function CreateAccount() {
     //     history.push("/main");
     // }
 
+    //todo injection
+    const  userService = new UserService();
+
     function onFormSubmit(e) {
         e.preventDefault();
         console.log("submitted");
+        let user = new User();
+        userService.create(user)
+        userService.findByEmail(user.email)
     }
 
     return (
