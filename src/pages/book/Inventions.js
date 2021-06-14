@@ -2,11 +2,12 @@ import React from 'react';
 import LeftPage from "./LeftPage";
 import RightPage from "./RightPage";
 import matt from "../../assets/matt.png";
-import caesar from "../../assets/caesar.jpg"
-import piratenschip from "../../assets/piratenschip.jpg"
+import munten from "../../assets/munten.jpg"
+import nimes from "../../assets/nimes.jpg"
+import romeinseweg from "../../assets/romeinseweg.jpg"
 import whitespace from "../../assets/whitespace.png"
 
-function Emperors(props) {
+function Inventions(props) {
     return (
         <div>
             <div className='bookcontainer'>
@@ -14,11 +15,12 @@ function Emperors(props) {
                 <div className='bookPages'>
                     <leftaside className='leftPage'>
                         <LeftPage
-                            title='Julius Caesar'
-                            text='In het Romeinse Rijk waren de keizers de baas. De eerste keizer heette Julius Ceasar.
-                            Keizer Julius heeft in zijn leven veel gedaan. Hij heeft gevochten met piraten. Omdat hij zo
-                            sterk was heeft hij ook gewonnen. Hij heeft landen verovert en Rome zo steeds groter gemaakt.
-                            De mensen hielden van Caesar omdat hij zo sterk, slim en machtig was.'
+                            title='Uitvindingen'
+                            text='De Romeinen hebben een hoop uitgevonden. Ze waren de eerste die muntjes gebruikten om dingen
+                            te betalen. Ze hebben ook het cement uitgevonden waarmee ze grote gebouwen konden maken. Als
+                            er meer tijd is zal hier meer komen te staan. Voor nu sluiten we af met wegen. Die bouwden ze
+                            voor het eerst zo goed. Help je mee met het bouwen van een Romeinse weg?'
+
                         />
                     </leftaside>
                 </div>
@@ -26,15 +28,15 @@ function Emperors(props) {
                 <div className='bookPages'>
                     <rightaside className='rightPage'>
                         <RightPage
-                            imageOne={whitespace}
+                            imageOne={munten}
                             imageTwo={whitespace}
                             imageThree={whitespace}
                             imageFour={whitespace}
-                            imageFive={caesar}
+                            imageFive={nimes}
                             imageSix={whitespace}
                             imageSeven={whitespace}
-                            imageEight={piratenschip}
-                            imageNine={whitespace}
+                            imageEight={whitespace}
+                            imageNine={romeinseweg}
 
                             titleOne="something"
                             titleTwo="something"
@@ -53,4 +55,4 @@ function Emperors(props) {
     );
 }
 
-export default Emperors;
+export default Inventions;

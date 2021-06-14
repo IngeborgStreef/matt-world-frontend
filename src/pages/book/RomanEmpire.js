@@ -6,6 +6,7 @@ import heuvels from "../../assets/heuvels.jpg"
 import kaartrome from "../../assets/kaartrome.png"
 import soldaat from "../../assets/soldaat.jpg"
 import munten from "../../assets/munten.jpg"
+import whitespace from "../../assets/whitespace.png"
 
 function RomanEmpire(props) {
     return (
@@ -27,14 +28,14 @@ function RomanEmpire(props) {
                     <rightaside className='rightPage'>
                         <RightPage
                             imageOne={heuvels}
-                            imageTwo={kaartrome}
-                            imageThree={soldaat}
-                            imageFour={munten}
-                            imageFive={matt}
-                            imageSix={matt}
-                            imageSeven={matt}
-                            imageEight={matt}
-                            imageNine={matt}
+                            imageTwo={whitespace}
+                            imageThree={kaartrome}
+                            imageFour={whitespace}
+                            imageFive={whitespace}
+                            imageSix={whitespace}
+                            imageSeven={soldaat}
+                            imageEight={whitespace}
+                            imageNine={munten}
 
                             titleOne="something"
                             titleTwo="something"

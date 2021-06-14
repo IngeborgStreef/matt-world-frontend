@@ -28,6 +28,7 @@ import './pages/book/Book.css'
 import './pages/book/some.css'
 import RomanEmpire from "./pages/book/RomanEmpire"
 import Emperors from "./pages/book/Emperors";
+import Inventions from "./pages/book/Inventions";
 
 
 //Assets
