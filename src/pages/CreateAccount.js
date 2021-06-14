@@ -53,9 +53,17 @@ function CreateAccount() {
 
                         <label htmlFor="password">
                             Wachtwoord:
-                            <input type="text"
+                            <input type="password"
                                    name="password"
                                    id="password"
+                            />
+                        </label>
+
+                        <label htmlFor="password-confirmation">
+                            Herhaal wachtwoord:
+                            <input type="password"
+                                   name="password-confirmation"
+                                   id="password-confirmation"
                             />
                         </label>
 

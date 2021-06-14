@@ -13,10 +13,10 @@
     height: 1100px;
     justify-content: space-around;
     align-items: center;
+    transition-duration: 2s;
 }
 
-.introPage :hover {
+.circle:hover {
     width: 1300px;
     height: 1300px;
-    transition-duration: 2s;
 }

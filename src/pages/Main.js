@@ -18,7 +18,7 @@ function Main() {
                     image={earth}
                     title="userpic"
                     navigationdirection="Ga verder"
-                    target="/book"
+                    target="/roman-empire"
                 />
                 <NavigationBar
                     image={earth}

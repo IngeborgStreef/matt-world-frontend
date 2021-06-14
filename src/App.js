@@ -47,40 +47,39 @@ import './components/AwnserButton.css';
 
 function App() {
     return (
-        <>
-            <Emperors />
-            </>
-        // <Router>
-        //     <Switch>
-        //         <Route exact path="/">
-        //             <Intro/>
-        //         </Route>
-        //
-        //         <Route path="/main">
-        //             <Main />
-        //         </Route>
-        //
-        //         <Route path="/create-account">
-        //             <CreateAccount />
-        //         </Route>
-        //
-        //         <Route path="/other-user">
-        //             <OtherAccount />
-        //         </Route>
-        //
-        //         <Route path="/world-map">
-        //             <WorldMap />
-        //         </Route>
-        //
-        //         <Route path="/book">
-        //             <Book />
-        //         </Route>
-        //
-        //         <Route path="roman-empire">
-        //             <RomanEmpire />
-        //         </Route>
-        //     </Switch>
-        // </Router>
+        <Router>
+            <Switch>
+
+                <Route exact path="/">
+                    <Intro />
+                </Route>
+
+                <Route path="/main">
+                    <Main />
+                </Route>
+
+                <Route path="/create-account">
+                    <CreateAccount />
+                </Route>
+
+                <Route path="/other-user">
+                    <OtherAccount />
+                </Route>
+
+                <Route path="/world-map">
+                    <WorldMap />
+                </Route>
+
+                <Route path="/book">
+                    <Book />
+                </Route>
+
+                <Route path="/roman-empire">
+                    <RomanEmpire />
+                </Route>
+
+            </Switch>
+        </Router>
     );
 }
 

@@ -7,12 +7,15 @@ import kaartrome from "../../assets/kaartrome.png"
 import soldaat from "../../assets/soldaat.jpg"
 import munten from "../../assets/munten.jpg"
 import whitespace from "../../assets/whitespace.png"
+import arrowLeft from "../../assets/arrowleft.png"
 
 function RomanEmpire(props) {
     return (
         <div>
-            <div className='bookcontainer'>
+            <aside>
 
+            </aside>
+            <div className='bookcontainer'>
                 <div className='bookPages'>
                     <leftaside className='leftPage'>
                         <LeftPage
