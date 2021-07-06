@@ -1,5 +1,6 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
+import {BsArrowRight} from "react-icons/bs"
 
 function NavigationBar({image, title, navigationdirection, target}) {
     const history = useHistory();
@@ -17,6 +18,9 @@ function NavigationBar({image, title, navigationdirection, target}) {
                     <p className="navigation-direction">
                         {navigationdirection}
                     </p>
+                    <div className="arrow-holder">
+                        <BsArrowRight/>
+                    </div>
                 </button>
             </article>
     );

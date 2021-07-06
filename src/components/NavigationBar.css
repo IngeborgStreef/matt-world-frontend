@@ -6,9 +6,17 @@ button {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-style: solid;
     border-color: black;
+}
+
+.arrow-holder {
+    display: none;
+}
+
+.navigation-bar:hover .arrow-holder {
+    display: block;
 }
 
 .navigation-bar img {

@@ -2,6 +2,8 @@ import React from 'react';
 import LeftPage from "./LeftPage";
 import RightPage from "./RightPage";
 import matt from "../../assets/matt.png"
+import arrowlefty from "../../assets/arrowlefty.png"
+import arrowrighty from "../../assets/arrowrighty.png"
 
 function Book(props) {
     return (

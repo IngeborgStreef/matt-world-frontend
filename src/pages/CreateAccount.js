@@ -1,26 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import matt from '../assets/matt.png';
 import arrowleft from '../assets/arrowleft.png'
 import {useHistory} from "react-router-dom";
 import {User} from "../models/User";
 import {UserService} from "../services/UserService";
+import {useForm} from "react-hook-form";
 
 function CreateAccount() {
-    // const history = useHistory();
-    // function handleClick() {
-    //     history.push("/main");
-    // }
+
+    const {handleSubmit, formState: {errors}, register} = useForm();
+    const [parentName, setParentName] = useState("");
+    const [email, setEmail] = useState("");
+    const [nameKid, setNameKid] = useState("");
+    const [ageKid, setAgeKid] = useState(0);
+    const [password, setPassword] = useState("");
+
+    function onFormSubmit(data) {
+        console.log(data)
+    }
+
+    const validatePassword = (value)=> {
+        if (password !== value) return false;
+    }
+
+    const history = useHistory();
+    function handleClick() {
+        history.push("/main");
+    }
 
     //todo injection
     const  userService = new UserService();
-
-    function onFormSubmit(e) {
-        e.preventDefault();
-        console.log("submitted");
-        let user = new User();
-        userService.create(user)
-        userService.findByEmail(user.email)
-    }
 
     return (
         <>
@@ -29,7 +38,7 @@ function CreateAccount() {
                     <img src={matt} alt="Matt"/>
                 </aside>
 
-                <form onSubmit={onFormSubmit} className="newUserForm">
+                <form className="newUserForm" onSubmit={handleSubmit(onFormSubmit)}>
                     <h1>Nieuwe gebruiker</h1>
 
                     <legend>
@@ -38,25 +47,41 @@ function CreateAccount() {
                         <label htmlFor="parent-name">
                             Naam ouder:
                             <input type="text"
-                                   name="name"
                                    id="details-parent-name"
+                                   placeholder="Type hier uw naam"
+                                   // value={parentName}
+                                   // onChange={(event) => setParentName(event.target.value)}
+                                   {...register("parentName",
+                                       {
+                                       required: true
+                                   })}
                             />
+                            {errors.parentName && <p className="errorMessage">erororororororororororrrrrrooooooooorr</p>}
                         </label>
 
                         <label htmlFor="email">
                             E-mail adres:
                             <input type="text"
-                                   name="e-mail"
-                                   id="e-mail"
+                                   //id
+                                   placeholder="ouder@service.nl"
+                                   {...register("emailRegistration", {
+                                       required: true,
+                                       validate: (value) => value.includes('@')
+                                   })}
                             />
+                            {errors.emailRegistration && <p className="errorMessage">erororororororororororrrrrrooooooooorr</p>}
                         </label>
 
                         <label htmlFor="password">
                             Wachtwoord:
                             <input type="password"
-                                   name="password"
                                    id="password"
+                                   placeholder="Uw wachtwoord"
+                                   {...register("password", {
+                                       required: true,
+                                   })}
                             />
+                            {errors.password && <p className="errorMessage">erororororororororororrrrrrooooooooorr</p>}
                         </label>
 
                         <label htmlFor="password-confirmation">
@@ -64,7 +89,12 @@ function CreateAccount() {
                             <input type="password"
                                    name="password-confirmation"
                                    id="password-confirmation"
+                                   placeholder="Herhaal uw wachtwoord"
+                                   {...register("passwordConfirmation", {
+                                       required: true,
+                                   })}
                             />
+                            {errors.passwordConfirmation && <p className="errorMessage">erororororororororororrrrrrooooooooorr</p>}
                         </label>
 
                     </legend>
@@ -74,21 +104,33 @@ function CreateAccount() {
                         <label htmlFor="kid-name">
                             Naam kind:
                             <input type="text"
-                                   name="name"
                                    id="details-kid-name"
+                                   placeholder="Naam van uw kind"
+                                   {...register("nameKid", {
+                                           required: true
+                                       }
+                                   )}
                             />
+                            {errors.nameKid && <p className="errorMessage">erororororororororororrrrrrooooooooorr</p>}
                         </label>
 
                         <label htmlFor="details-age">
                             Leeftijd kind:
                             <input type="text"
-                                   name="age"
                                    id="details-age"
+                                   placeholder="Leeftijd van uw kind"
+                                   {...register("ageKid", {
+                                           required: true
+                                       }
+                                   )}
                             />
+                            {errors.ageKid && <p className="errorMessage">erororororororororororrrrrrooooooooorr</p>}
                         </label>
                     </legend>
 
-                    <button type="submit" className="button">
+                    <button
+                        type="submit"
+                        className="button">
                         Versturen
                     </button>
 
@@ -105,3 +147,6 @@ function CreateAccount() {
 }
 
 export default CreateAccount;
+
+// value={email}
+// onChange={(event) => setEmail(event.target.value)}

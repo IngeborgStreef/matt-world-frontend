@@ -25,7 +25,6 @@ import './pages/ShapeGame.css';
 import WorldMap from "./pages/WorldMap";
 import Book from "./pages/book/Book"
 import './pages/book/Book.css'
-import './pages/book/some.css'
 import RomanEmpire from "./pages/book/RomanEmpire"
 import Emperors from "./pages/book/Emperors";
 import Inventions from "./pages/book/Inventions";
@@ -43,6 +42,7 @@ import './components/Reading.css';
 import Shop from "./pages/admin/Shop";
 import AwnserButton from "./components/AwnserButton";
 import './components/AwnserButton.css';
+import Login from "./pages/Login";
 // import Book from "./pages/book/Book";
 
 function App() {
@@ -76,6 +76,10 @@ function App() {
 
                 <Route path="/roman-empire">
                     <RomanEmpire />
+                </Route>
+
+                <Route path="/admin">
+                    <AdminElliot />
                 </Route>
 
             </Switch>

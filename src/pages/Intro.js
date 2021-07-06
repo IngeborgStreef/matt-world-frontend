@@ -1,20 +1,33 @@
 import React from 'react';
 import {useHistory} from "react-router-dom";
+import earth from "../assets/earth.png"
+import {useState} from "react";
 
 function Intro() {
     const history = useHistory();
+    const [showEarth, setShowEarth] = useState(false);
 
     function handleClick() {
-        history.push("/main");
+        setShowEarth(true);
+        setTimeout(() => history.push('/main'),1000);
     }
 
-    // setTimeout(() => history.push('/main'),5000)
+
+    const circle = (
+        <div className="circle" onClick={handleClick}>
+            <h1 className="title">IT'S A MATT WORLD</h1>
+        </div>
+    )
+
+    const earthElement = (
+        <img
+            className="earth"
+            src={earth}/>
+    )
 
     return (
         <div className="introPage">
-            <div className='circle' onClick={handleClick}>
-                <h1 className="title">IT'S A MATT WORLD</h1>
-            </div>
+            {showEarth ? earthElement : circle}
         </div>
     );
 }

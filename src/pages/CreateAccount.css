@@ -13,6 +13,10 @@
     "matt newUserForm";
 }
 
+.errorMessage {
+    color: red;
+}
+
 .matt {
     grid-area: matt;
 }

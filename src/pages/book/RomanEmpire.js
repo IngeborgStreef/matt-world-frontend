@@ -7,14 +7,19 @@ import kaartrome from "../../assets/kaartrome.png"
 import soldaat from "../../assets/soldaat.jpg"
 import munten from "../../assets/munten.jpg"
 import whitespace from "../../assets/whitespace.png"
-import arrowLeft from "../../assets/arrowleft.png"
+import {FaArrowLeft} from "react-icons/fa"
+import {FaArrowRight} from "react-icons/fa"
+import {BsBoxArrowInLeft} from "react-icons/bs"
 
 function RomanEmpire(props) {
+
+    function handleClick() {
+
+    }
+
     return (
         <div>
-            <aside>
 
-            </aside>
             <div className='bookcontainer'>
                 <div className='bookPages'>
                     <leftaside className='leftPage'>
@@ -53,6 +58,16 @@ function RomanEmpire(props) {
                     </rightaside>
                 </div>
             </div>
+
+            <footer className="arrows">
+                <FaArrowLeft className="arrowLeft"></FaArrowLeft>
+                <FaArrowRight className={"arrowRight"}></FaArrowRight>
+            </footer>
+
+            <div>
+                <BsBoxArrowInLeft  className="go-back-arrow"></BsBoxArrowInLeft>
+            </div>
+
         </div>
     );
 }

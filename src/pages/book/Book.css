@@ -79,3 +79,23 @@ main {
 #imageNine {
     grid-area: i;
 }
+
+.arrows {
+    display: flex;
+    justify-content: center;
+}
+
+.arrowLeft {
+    width: 50px;
+    height: 50px;
+}
+
+.arrowRight {
+    width: 50px;
+    height: 50px;
+}
+
+.go-back-arrow {
+    width: 50px;
+    height: 50px;
+}
