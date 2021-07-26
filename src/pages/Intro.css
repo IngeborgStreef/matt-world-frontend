@@ -1,39 +1,39 @@
-.circle {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    /*background-color: #C0C7D8;*/
-    border-style: solid;
-    border-width: 3px;
-    border-color: #434C68;
-    border-radius: 50%;
-    width: 1100px;
-    height: 1100px;
-    justify-content: space-around;
-    align-items: center;
-    transition-duration: 2s;
-}
+/*.circle {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    display: flex;*/
+/*    !*background-color: #C0C7D8;*!*/
+/*    border-style: solid;*/
+/*    border-width: 3px;*/
+/*    border-color: #434C68;*/
+/*    border-radius: 50%;*/
+/*    width: 1100px;*/
+/*    height: 1100px;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*    transition-duration: 2s;*/
+/*}*/
 
-.circle:hover {
-    width: 1300px;
-    height: 1300px;
-}
+/*.circle:hover {*/
+/*    width: 1300px;*/
+/*    height: 1300px;*/
+/*}*/
 
-.earth {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    border-style: solid;
-    border-width: 3px;
-    border-color: #434C68;
-    border-radius: 50%;
-    width: 1300px;
-    height: 1300px;
-    justify-content: space-around;
-    align-items: center;
-    transition-duration: 2s;
-}
+/*.earth {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    display: flex;*/
+/*    border-style: solid;*/
+/*    border-width: 3px;*/
+/*    border-color: #434C68;*/
+/*    border-radius: 50%;*/
+/*    width: 1300px;*/
+/*    height: 1300px;*/
+/*    justify-content: space-around;*/
+/*    align-items: center;*/
+/*    transition-duration: 2s;*/
+/*}*/

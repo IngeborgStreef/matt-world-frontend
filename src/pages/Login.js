@@ -1,52 +1,56 @@
 // import React from 'react';
-// import matt from "../assets/matt.png";
-// import NavigationBar from "../components/NavigationBar";
+// import {useForm} from "react-hook-form";
+// import {useHistory} from "react-router-dom";
+// import axios from "axios";
 //
 // function Login() {
+//
+//     const {handleSubmit, formState: {errors}, register} = useForm();
+//     const history = useHistory();
+//
+//     async function onFormSubmit(data) {
+//         let response = await axios.post("http://localhost:8080/login",{username: data.email, password: data.password});
+//         let token = response.data.jwt;
+//         //todo set token
+//         console.log(token);
+//         history.push("/roman-empire")
+//     }
+//
 //     return (
 //         <>
-//             <main className="loginContainer">
-//                 <aside className="matt">
-//                     <img src={matt} alt="Matt"/>
-//                 </aside>
+//             <form className="loginForm" onSubmit={handleSubmit(onFormSubmit)}>
+//                 <h1>Login</h1>
 //
-//                 <form className="newUserForm">
-//                     <h1>Login</h1>
+//                 <div>
+//                     <label htmlFor="email">
+//                         <input type="text"
+//                                name="e-mail"
+//                                id="e-mail"
+//                                placeholder="Email"
+//                                {...register("email", {
+//                                    required: true,
+//                                })}
+//                         />
+//                     </label>
+//                 </div>
+//                 <div>
+//                     <label htmlFor="password">
+//                         <input type="password"
+//                                name="password"
+//                                id="password"
+//                                placeholder="Wachtwoord"
+//                                {...register("password", {
+//                                    required: true,
+//                                })}
+//                         />
+//                     </label>
+//                 </div>
 //
-//                     <legend>
-//                         <legend>Informatie ouder</legend>
+//                 <button type="submit" className="button">
+//                     Login
+//                 </button>
+//             </form>
 //
-//                         <label htmlFor="email">
-//                             E-mail adres:
-//                             <input type="text"
-//                                    name="e-mail"
-//                                    id="e-mail"
-//                             />
-//                         </label>
-//
-//                         <label htmlFor="password">
-//                             Wachtwoord:
-//                             <input type="password"
-//                                    name="password"
-//                                    id="password"
-//                             />
-//                         </label>
-//                     </legend>
-//
-//
-//
-//                     <button type="submit" className="button">
-//                         Login
-//                     </button>
-//                 </form>
-//
-//                 <NavigationBar
-//                     image={matt}
-//                     title="matt"
-//                     navigationdirection="Nieuwe gebruiker"
-//                     target="/create-account"
-//                     />
-//             </main>
 //         </>
 //     );
 // }

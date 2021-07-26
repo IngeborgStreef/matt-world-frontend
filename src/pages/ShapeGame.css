@@ -1,32 +1,32 @@
-.game-container {
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    justify-items: center;
-    grid-template-areas:
-    "awnser-a road awnser-b"
-    ". question ."
-    "awnser-c road awnser-d";
-}
-
-/*.awnser-a {*/
-/*    grid-area: awnser-a;*/
+/*.game-container {*/
+/*    display: grid;*/
+/*    height: 100%;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    grid-template-rows: repeat(3, 1fr);*/
+/*    justify-content: center;*/
+/*    justify-items: center;*/
+/*    grid-template-areas:*/
+/*    "awnser-a road awnser-b"*/
+/*    ". question ."*/
+/*    "awnser-c road awnser-d";*/
 /*}*/
 
-/*.awnser-b {*/
-/*    grid-area: awnser-b;*/
-/*}*/
+/*!*.awnser-a {*!*/
+/*!*    grid-area: awnser-a;*!*/
+/*!*}*!*/
 
-/*.awnser-c {*/
-/*    grid-area: awnser-c;*/
-/*}*/
+/*!*.awnser-b {*!*/
+/*!*    grid-area: awnser-b;*!*/
+/*!*}*!*/
 
-/*.awnser-d {*/
-/*    grid-area: awnser-d;*/
-/*}*/
+/*!*.awnser-c {*!*/
+/*!*    grid-area: awnser-c;*!*/
+/*!*}*!*/
 
-/*.question {*/
-/*    grid-area: question;*/
-/*}*/
+/*!*.awnser-d {*!*/
+/*!*    grid-area: awnser-d;*!*/
+/*!*}*!*/
+
+/*!*.question {*!*/
+/*!*    grid-area: question;*!*/
+/*!*}*!*/

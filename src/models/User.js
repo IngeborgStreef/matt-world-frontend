@@ -1,7 +1,7 @@
-export class User {
-    name;
-    email;
-    password;
-    passwordConfirmation;
-
-}
+// export class User {
+//     name;
+//     email;
+//     password;
+//     passwordConfirmation;
+//
+// }

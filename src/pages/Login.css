@@ -1,23 +1,5 @@
-/*#root, body, html, .App{*/
-/*    height: 100%;*/
-/*}*/
 
-/*.loginContainer {*/
-/*    display: grid;*/
-/*    height: 90%;*/
-/*    grid-template-columns: 1fr 1fr;*/
-/*    grid-template-rows: 1fr;*/
-/*    align-items: center;*/
-/*    justify-items: center;*/
-/*    grid-template-areas:*/
-/*    "matt newUserForm";*/
-/*}*/
-
-/*.matt {*/
-/*    grid-area: matt;*/
-/*}*/
-
-/*.newUserForm {*/
+/*.loginForm {*/
 /*    grid-area: newUserForm;*/
 /*    width: 10em;*/
 /*    display: flex;*/
