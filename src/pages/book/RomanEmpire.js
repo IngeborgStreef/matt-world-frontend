@@ -1,12 +1,12 @@
 import React from 'react';
-import StandardBook from "../../components/StandardBook";
+import Book from "../../components/Book";
 import mapRome from "../../assets/mapRome.png";
 import caesar from "../../assets/caesar.jpg";
 import coins from "../../assets/coins.jpg";
 
 function RomanEmpire(props) {
     return (
-        <StandardBook
+        <Book
             frontone= "Het Romeinse Rijk"
             titleone= "De Romeinen"
             backone= "Lang geleden leefden de Romeinen. Dit begon op de grote heuvels in Rome. Maar uiteindelijk

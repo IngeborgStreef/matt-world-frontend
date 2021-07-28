@@ -1,9 +1,9 @@
-/*.somecontainer {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
+.somecontainer {
+    display: flex;
+    align-items: center;
+}
 
-/*.informationdetails {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
+.informationdetails {
+    display: flex;
+    flex-direction: column;
+}

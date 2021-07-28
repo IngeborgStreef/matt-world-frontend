@@ -1,10 +1,10 @@
 import React from 'react';
-import './StandardBook.css';
+import './Book.css';
 import {FiArrowLeftCircle} from "react-icons/fi";
 import {FiArrowRightCircle} from "react-icons/fi";
 import {IconContext} from "react-icons"
 
-function StandardBook({
+function Book({
                           frontone,
                           titleone,
                           backone,
@@ -227,4 +227,4 @@ function StandardBook({
     );
 }
 
-export default StandardBook;
+export default Book;

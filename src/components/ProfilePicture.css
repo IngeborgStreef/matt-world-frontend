@@ -1,25 +1,25 @@
-/*.title {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
+.title {
+    display: flex;
+    justify-content: center;
+}
 
-/*.account-container {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/*.profile-picture {*/
-/*    margin: 5em;*/
-/*    padding-left: 1em;*/
-/*    padding-right: 3em;*/
-/*    width: 10em;*/
-/*    height: 10em;*/
-/*    border-style: solid;*/
-/*    border-color: black;*/
-/*}*/
+.profile-picture {
+    margin: 5em;
+    padding-left: 1em;
+    padding-right: 3em;
+    width: 10em;
+    height: 10em;
+    border-style: solid;
+    border-color: black;
+}
 
-/*.picture {*/
-/*    width: 10em;*/
-/*    height: 10em;*/
-/*}*/
+.picture {
+    width: 10em;
+    height: 10em;
+}
