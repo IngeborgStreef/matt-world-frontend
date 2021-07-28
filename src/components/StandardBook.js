@@ -4,10 +4,23 @@ import {FiArrowLeftCircle} from "react-icons/fi";
 import {FiArrowRightCircle} from "react-icons/fi";
 import {IconContext} from "react-icons"
 
-function StandardBook({frontone, backone, fronttwo, backtwo, frontthree, backthree}) {
+function StandardBook({
+                          frontone,
+                          titleone,
+                          backone,
+                          fronttwo,
+                          titletwo,
+                          backtwo,
+                          frontthree,
+                          titlethree,
+                          backthree,
+                          frontfour,
+                          titlefour,
+                          backfour
+                      }) {
 
     let currentLocation = 1;
-    let numOfPapers = 3;
+    let numOfPapers = 4;
     let maxLocation = numOfPapers + 1;
 
     function openBook() {
@@ -37,27 +50,44 @@ function StandardBook({frontone, backone, fronttwo, backtwo, frontthree, backthr
         const paperOne = document.querySelector("#page-one");
         const paperTwo = document.querySelector("#page-two");
         const paperThree = document.querySelector("#page-three");
+        const paperFour = document.querySelector("#page-four");
+
+        console.log(`paperOne: ${paperOne.style.zIndex}, paperTwo: ${paperTwo.style.zIndex}, paperThree: ${paperThree.style.zIndex}, paperFour: ${paperFour.style.zIndex}, currentPage: ${currentLocation}`)
+
+        paperOne.style.zIndex = 1
+        paperTwo.style.zIndex = 1
+        paperThree.style.zIndex = 1
+        paperFour.style.zIndex = 1
+
 
         if (currentLocation < maxLocation) {
             switch (currentLocation) {
                 case 1:
                     openBook();
                     paperOne.classList.add("flipped");
-                    paperOne.style.zIndex = 1;
+                    paperOne.style.zIndex = 3;
+                    paperTwo.style.zIndex = 2;
                     break;
                 case 2:
                     paperTwo.classList.add("flipped");
-                    paperTwo.style.zIndex = 2;
+                    paperTwo.style.zIndex = 4;
+                    paperThree.style.zIndex = 3;
                     break;
                 case 3:
                     paperThree.classList.add("flipped");
-                    paperThree.style.zIndex = 3;
+                    paperThree.style.zIndex = 5;
+                    paperFour.style.zIndex = 4;
+                    break;
+                case 4:
+                    paperFour.classList.add("flipped");
+                    paperFour.style.zIndex = 5;
                     closeBook(false);
                     break;
                 default:
                     throw new Error("unknown state");
             }
             currentLocation++;
+            console.log(`paperOne: ${paperOne.style.zIndex}, paperTwo: ${paperTwo.style.zIndex}, paperThree: ${paperThree.style.zIndex}, paperFour: ${paperFour.style.zIndex}, currentPage: ${currentLocation}`)
         }
     }
 
@@ -66,28 +96,36 @@ function StandardBook({frontone, backone, fronttwo, backtwo, frontthree, backthr
         const paperOne = document.querySelector("#page-one");
         const paperTwo = document.querySelector("#page-two");
         const paperThree = document.querySelector("#page-three");
+        const paperFour = document.querySelector("#page-four");
+
+        console.log(`paperOne: ${paperOne.style.zIndex}, paperTwo: ${paperTwo.style.zIndex}, paperThree: ${paperThree.style.zIndex}, paperFour: ${paperFour.style.zIndex}, currentPage: ${currentLocation}`)
 
         if (currentLocation > 1) {
             switch (currentLocation) {
                 case 2:
                     closeBook(true);
                     paperOne.classList.remove("flipped");
-                    paperOne.style.zIndex = 3;
+                    paperOne.style.zIndex = 5;
                     break;
                 case 3:
                     paperTwo.classList.remove("flipped");
-                    paperTwo.style.zIndex = 2;
+                    paperTwo.style.zIndex = 4;
                     break;
                 case 4:
-                    openBook();
                     paperThree.classList.remove("flipped");
-                    paperThree.style.zIndex = 1;
+                    paperThree.style.zIndex = 3;
+                    break;
+                case 5:
+                    openBook();
+                    paperFour.classList.remove("flipped");
+                    paperFour.style.zIndex = 2;
                     break;
                 default:
                     throw new Error("unknown state");
             }
 
             currentLocation--;
+            console.log(`paperOne: ${paperOne.style.zIndex}, paperTwo: ${paperTwo.style.zIndex}, paperThree: ${paperThree.style.zIndex}, paperFour: ${paperFour.style.zIndex}, currentPage: ${currentLocation}`)
         }
     }
 
@@ -114,8 +152,11 @@ function StandardBook({frontone, backone, fronttwo, backtwo, frontthree, backthr
                 <div className="back-page">
                     <div className="back-content">
                         <h1>
-                            {backone}
+                            {titleone}
                         </h1>
+                        <p>
+                            {backone}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -123,16 +164,17 @@ function StandardBook({frontone, backone, fronttwo, backtwo, frontthree, backthr
             <div className="paper" id="page-two">
                 <div className="front-page">
                     <div className="front-content">
-                        <h1>
-                            {fronttwo}
-                        </h1>
+                        <img id="picturepagetwo" src={fronttwo} alt={fronttwo} className="bookpictures"/>
                     </div>
                 </div>
                 <div className="back-page">
                     <div className="back-content">
                         <h1>
-                            {backtwo}
+                            {titletwo}
                         </h1>
+                        <p>
+                            {backtwo}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -140,16 +182,35 @@ function StandardBook({frontone, backone, fronttwo, backtwo, frontthree, backthr
             <div className="paper" id="page-three">
                 <div className="front-page">
                     <div className="front-content">
-                        <h1>
-                            {frontthree}
-                        </h1>
+                        <img id="picturepagethree" src={frontthree} alt={frontthree} className="bookpictures"/>
                     </div>
                 </div>
                 <div className="back-page">
                     <div className="back-content">
                         <h1>
-                            {backthree}
+                            {titlethree}
                         </h1>
+                        <p>
+                            {backthree}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="paper" id="page-four">
+                <div className="front-page">
+                    <div className="front-content">
+                        <img id="picturepagefour" src={frontfour} alt={frontfour} className="bookpictures"/>
+                    </div>
+                </div>
+                <div className="back-page">
+                    <div className="back-content">
+                        <h1>
+                            {titlefour}
+                        </h1>
+                        <p>
+                            {backfour}
+                        </p>
                     </div>
                 </div>
             </div>

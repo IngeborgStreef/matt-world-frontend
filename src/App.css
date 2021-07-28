@@ -1,3 +1,8 @@
+body {
+    font-family: "Comic Sans MS";
+    background-color: #e1ecf1;
+}
+
 button {
     cursor: pointer;
 }
