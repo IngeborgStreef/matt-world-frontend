@@ -1,7 +1,8 @@
 import React from 'react';
-import "./Login.css";
+import "./FormStyling.css";
 import {useForm} from "react-hook-form";
 import {useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import axios from "axios";
 
 function Login() {
@@ -20,43 +21,49 @@ function Login() {
     return (
         <body>
         <div>
-        <div className="login-box">
-            <form className="loginForm" onSubmit={handleSubmit(onFormSubmit)}>
-                <h1 className="login-title">Login</h1>
+            <div className="login-box">
+                <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
+                    <h1 className="form-title">Login</h1>
 
-                <div>
-                    <label htmlFor="email">
-                        <input type="text"
-                               name="e-mail"
-                               id="e-mail"
-                               placeholder="Email"
-                               {...register("email", {
-                                   required: true,
-                               })}
-                        />
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="password">
-                        <input type="password"
-                               name="password"
-                               id="password"
-                               placeholder="Wachtwoord"
-                               {...register("password", {
-                                   required: true,
-                               })}
-                        />
-                    </label>
-                </div>
+                    <div>
+                        <label htmlFor="email">
+                            <input type="text"
+                                   name="e-mail"
+                                   id="e-mail"
+                                   placeholder="Email"
+                                   {...register("email", {
+                                       required: true,
+                                   })}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <label htmlFor="password">
+                            <input type="password"
+                                   name="password"
+                                   id="password"
+                                   placeholder="Wachtwoord"
+                                   {...register("password", {
+                                       required: true,
+                                   })}
+                            />
+                        </label>
+                    </div>
 
-                <button type="submit" className="login-button">
-                    Login
-                </button>
-            </form>
-        </div>
-        <p className="go-make-account">
-            Nog geen account? Maak er hier een aan
-        </p>
+                    <button type="submit" className="login-button">
+                        Login
+                    </button>
+                </form>
+            </div>
+            <p className="go-make-account">
+                Nog geen account?
+            </p>
+
+            <div className="link-go-make-account">
+                <Link to="/create-user" style={{color: '#FF729F', textDecoration: 'none'}}>
+                    <p>Maak er hier een aan</p>
+                </Link>
+            </div>
         </div>
         </body>
     );

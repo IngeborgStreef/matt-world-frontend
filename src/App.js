@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch,} from "react-router-dom";
 
 import Intro from "./pages/Intro";
 import Login from "./pages/Login";
+import CreateUserPage from "./pages/CreateUserPage";
 import RomanEmpire from "./pages/book/RomanEmpire";
 
 
@@ -19,6 +20,10 @@ function App() {
                 <Route path="/login">
                     <Login />
                 </Route>
+
+                <CreateUserPage path="/create-user">
+                    <CreateUserPage />
+                </CreateUserPage>
 
                 <Route path="/roman-empire">
                     <RomanEmpire />

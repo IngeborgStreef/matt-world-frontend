@@ -6,12 +6,20 @@
     background-color: white;
 }
 
-.login-title {
+.signup-box {
+    width: 360px;
+    height: 430px;
+    margin: auto;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.form-title {
     text-align: center;
     padding-top: 15px;
 }
 
-.loginForm {
+.form {
     width: 300px;
     margin-left: 30px;
 }
@@ -30,7 +38,8 @@ form input {
     outline: none;
 }
 
-.login-button {
+.login-button ,
+.signup-button {
     width: 300px;
     height: 35px;
     margin-top: 20px;
@@ -46,4 +55,16 @@ form input {
     text-align: center;
     padding-top: 20px;
     font-size: 15px;
+}
+
+.subtext {
+    text-align: center;
+}
+
+.link-go-make-account {
+    text-align: center;
+}
+
+.link-go-make-account:hover p {
+    color: #CC0041;
 }
