@@ -6,3 +6,7 @@ body {
 button {
     cursor: pointer;
 }
+
+p {
+    font-size: 15px;
+}

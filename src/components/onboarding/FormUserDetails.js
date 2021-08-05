@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import "./FormStyling.css";
+import React, {Component, useState} from 'react';
 import {useForm} from "react-hook-form";
+import "../../pages/FormStyling.css";
 
-function CreateUserPage() {
+function FormUserDetails({props}) {
 
     const {handleSubmit, formState: {errors}, register} = useForm();
     const [password, setPassword] = useState("");
@@ -11,8 +11,12 @@ function CreateUserPage() {
         if (password !== value) return false;
     }
 
+    function onNext(event) {
+        event.preventDefault();
+        props.nextStep();
+    }
+
     return (
-        <body>
         <div className="signup-box">
             <h1 className="form-title">Maak een account aan</h1>
             <h4 className="subtext">En lees gave boeken!</h4>
@@ -80,60 +84,8 @@ function CreateUserPage() {
 
             </form>
         </div>
-
-        <div className="signup-box">
-            <h1 className="form-title">Voeg uw kind toe</h1>
-            <h4 className="subtext">En lees gave boeken!</h4>
-
-            <form className="form-two">
-                <label htmlFor="Name">
-                    <input type="text"
-                           id="Name"
-                           placeholder="naam kind"
-                           {...register(
-                               "Name",
-                               {required: true}
-                           )}
-                    />
-                </label>
-
-                <label htmlFor="Age">
-                    <input type="date"
-                           id="Age"
-                           placeholder="geboortedatum"
-                           {...register(
-                               "Age",
-                               {required: true}
-                           )}
-                    />
-                </label>
-
-                    <label htmlFor="add-another-kid" className="add-another-kid-container">
-                        <p>Nog een kind toevoegen?</p>
-                        <input type="checkbox"
-                               id="add-another-kid"
-                        />
-                        <span className="checkbox"></span>
-                    </label>
-
-                <div className="btn-box">
-                    <button type="button" className="nav-button">
-                        vorige
-                    </button>
-                    <button type="submit" className="nav-button">
-                        verstuur
-                    </button>
-                </div>
-            </form>
-
-        </div>
-
-        </body>
     )
 }
 
-export default CreateUserPage;
 
-// <button type="submit" className="signup-button">
-//     bevestig
-// </button>
+export default FormUserDetails;

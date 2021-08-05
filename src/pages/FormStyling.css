@@ -19,7 +19,8 @@
     padding-top: 15px;
 }
 
-.form {
+.form-one,
+.form-two {
     width: 300px;
     margin-left: 30px;
 }
@@ -38,6 +39,87 @@ form input {
     outline: none;
 }
 
+.add-another-kid-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.add-another-kid-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 6px;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.checkbox:hover {
+    /*background-color: black;*/
+}
+
+.add-another-kid-container input:checked ~ .checkbox {
+    background-color: #CC0041;
+}
+
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.add-another-kid-container input:checked ~ .checkbox:after {
+    display: block;
+}
+
+.add-another-kid-container .checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    width: 130px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #00cc00;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
 .login-button ,
 .signup-button {
     width: 300px;
@@ -51,6 +133,20 @@ form input {
     font-size: 18px;
 }
 
+.form-two {
+    left: 450px;
+}
+
+.form-steps {
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #00cc00;
+    position: relative;
+}
+
 .go-make-account {
     text-align: center;
     padding-top: 20px;
@@ -61,7 +157,7 @@ form input {
     text-align: center;
 }
 
-.link-go-make-account {
+.link-go-make-account p {
     text-align: center;
 }
 
