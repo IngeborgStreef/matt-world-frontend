@@ -1,55 +1,85 @@
-import React, { Component } from "react";
-import FormUserDetails from "./FormUserDetails";
+import React, {Component} from "react";
+import FormParentDetails from "./FormParentDetails";
+import FormChildDetails from "./FormChildDetails";
+import FormAvatarUpload from "./FormAvatarUpload";
+
+// import FormAvatarUpload from "./FormAvatarUpload";
 
 export class UserForm extends Component {
     state = {
         step: 1,
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        nameKid: '',
-        dateOfBirth: ''
+        parent: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: '',
+            avatar: ''
+        },
+        child: {
+            name: '',
+            dateOfBirth: ''
+        }
     }
 
     nextStep = () => {
-        const { step } = this.state;
+        const {step} = this.state;
         this.setState({
             step: step + 1
         })
     }
 
     prevStep = () => {
-        const { step } = this.state;
+        const {step} = this.state;
         this.setState({
             step: step - 1
         })
     }
 
-    handleChange = input => e => {
-        this.setState({[input]: e.target.value});
+    updateParent = parent => {
+        this.setState({parent: parent})
+        //create/update parent
+
+    }
+
+    updateChild = child => {
+        this.setState({child: child})
+        //create/update Child
     }
 
     render() {
-        const { step } = this.state;
-        const { firstName, lastName, email, password, nameKid, dateOfBirth } = this.state;
-        const values = { firstName, lastName, email, password, nameKid, dateOfBirth }
+        const {step} = this.state;
 
         switch (step) {
             case 1:
                 return (
-                    <FormUserDetails
-                    nextStep={this.nextStep}
-                    handleChange={this.handleChange}
-                    values={values}
+                    <FormParentDetails
+                        nextStep={this.nextStep}
+                        updateParent={this.updateParent}
+                        values={this.state.parent}
                     />
                 )
             case 2:
-                return <h1>FormPersonalDetails</h1>
+                return (
+                    <FormAvatarUpload
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        updateParent={this.updateParent}
+                        values={this.state.parent}
+                    />
+                )
             case 3:
-                return <h1>Confirm</h1>
+                return (
+                    <FormChildDetails
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        updateChild={this.updateChild}
+                        values={this.state.child}
+                    />
+                )
             case 4:
-                return <h1>Success</h1>
+                return <FormAvatarUpload title="Kind"/>
+            case 5:
+                return <h1>Uw gegevens zijn succesvol verstuurd</h1>
         }
     }
 }

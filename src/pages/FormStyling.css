@@ -1,14 +1,14 @@
 .login-box {
-    width: 360px;
-    height: 280px;
+    width: 350px;
+    height: 260px;
     margin: auto;
     border-radius: 6px;
     background-color: white;
 }
 
 .signup-box {
-    width: 360px;
-    height: 430px;
+    width: 380px;
+    height: 475px;
     margin: auto;
     border-radius: 6px;
     background-color: white;
@@ -27,16 +27,19 @@
 
 form label {
     display: flex;
+    width: 330px;
     margin-top: 20px;
+    margin-left: 10px;
     font-size: 18px;
 }
 
 form input {
-    width: 100%;
+    width: 80%;
     padding: 7px;
     border: 1px solid gray;
     border-radius: 6px;
     outline: none;
+    margin-left: 30px;
 }
 
 .add-another-kid-container {
@@ -111,6 +114,7 @@ form input {
     width: 130px;
     height: 35px;
     margin-top: 20px;
+    margin-left: 40px;
     border: none;
     background-color: #00cc00;
     padding: 10px 30px;
@@ -122,9 +126,10 @@ form input {
 
 .login-button ,
 .signup-button {
-    width: 300px;
+    width: 265px;
     height: 35px;
     margin-top: 20px;
+    margin-left: 40px;
     border: none;
     background-color: #00cc00;
     padding: 10px 30px;
@@ -163,4 +168,21 @@ form input {
 
 .link-go-make-account:hover p {
     color: #CC0041;
+}
+
+.errorMessage {
+    font-size: 10px;
+    color: #CC0041;
+}
+
+/*.full-height {*/
+/*    height: 100%;*/
+/*}*/
+
+.image-upload {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
 }

@@ -8,21 +8,21 @@ import axios from "axios";
 function Login() {
 
     const {handleSubmit, formState: {errors}, register} = useForm();
-    // const history = useHistory();
+    const history = useHistory();
 
-    // async function onFormSubmit(data) {
-    //     let response = await axios.post("http://localhost:8080/login", {username: data.email, password: data.password});
-    //     let token = response.data.jwt;
-    //     //todo set token
-    //     console.log(token);
-    //     history.push("/roman-empire")
-    // }
+    async function onFormSubmit(data) {
+        // let response = await axios.post("http://localhost:8080/login", {username: data.email, password: data.password});
+        // let token = response.data.jwt;
+        // //todo set token
+        // console.log(token);
+        history.push("/roman-empire")
+    }
 
     return (
         <body>
         <div>
             <div className="login-box">
-                <form className="form">
+                <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
                     <h1 className="form-title">Login</h1>
 
                     <div>
@@ -50,9 +50,12 @@ function Login() {
                         </label>
                     </div>
 
-                    <button type="submit" className="login-button">
-                        Login
-                    </button>
+                    <input
+                        type="submit"
+                        className="login-button"
+                        value="Login"
+                    >
+                    </input>
                 </form>
             </div>
             <p className="go-make-account">
