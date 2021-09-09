@@ -20,7 +20,6 @@ function FormParentDetails(props) {
     }
 
     return (
-
         <div className="signup-box">
             <h1 className="form-title">Maak een account aan</h1>
             <h4 className="subtext">En lees gave boeken!</h4>

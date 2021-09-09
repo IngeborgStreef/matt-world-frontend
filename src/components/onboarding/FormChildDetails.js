@@ -7,7 +7,6 @@ function FormChildDetails(props) {
     const {handleSubmit, formState: { errors }, register} = useForm();
 
     function onNext(data) {
-        //if errror dont go to next, show message
         props.updateChild(data);
         props.nextStep();
     }
@@ -23,27 +22,29 @@ function FormChildDetails(props) {
             <h4 className="subtext">En lees gave boeken!</h4>
 
             <form className="form-two" onSubmit={handleSubmit(onNext)}>
-                <label htmlFor="Name">
+                <label htmlFor="name">
                     <input type="text"
                            id="Name"
                            placeholder="naam kind"
+                           defaultValue={props.values.name}
                            {...register(
                                "name",
-                               {required: true}
-                           )}
+                               {required: true})}
                     />
                 </label>
+                {errors.firstName && <p className="errorMessage">Dit veld is verplicht</p>}
 
                 <label htmlFor="dateOfBirth">
                     <input type="date"
                            id="dateOfBirth"
                            placeholder="geboortedatum"
+                           defaultValue={props.values.dateOfBirth}
                            {...register(
                                "dateOfBirth",
-                               {required: true}
-                           )}
+                               {required: true})}
                     />
                 </label>
+                {errors.firstName && <p className="errorMessage">Dit veld is verplicht</p>}
 
                 {/*<label htmlFor="add-another-kid" className="add-another-kid-container">*/}
                 {/*    <p>Nog een kind toevoegen?</p>*/}
@@ -61,18 +62,22 @@ function FormChildDetails(props) {
                     >
                         vorige
                     </button>
-                    <input
-                        type="submit"
-                        className="nav-button"
-                        value= "verstuur"
-                    >
-                    </input>
+
+                    <div className="btn-box">
+                        <input
+                            type="submit"
+                            className="nav-button"
+                            value="volgende"
+                        >
+                        </input>
+                    </div>
                 </div>
             </form>
-
         </div>
     )
 }
 
 
 export default FormChildDetails;
+
+// todo make error massages work

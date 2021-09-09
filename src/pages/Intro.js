@@ -10,7 +10,7 @@ function Intro() {
 
     function handleClick() {
         setShowEarth(true);
-        setTimeout(() => history.push('/login'),2000);
+        setTimeout(() => history.push('/login'), 2000);
     }
 
 

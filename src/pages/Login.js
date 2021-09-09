@@ -19,7 +19,6 @@ function Login() {
     }
 
     return (
-        <body>
         <div>
             <div className="login-box">
                 <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
@@ -68,7 +67,6 @@ function Login() {
                 </Link>
             </div>
         </div>
-        </body>
     );
 }
 

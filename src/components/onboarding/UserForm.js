@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import FormParentDetails from "./FormParentDetails";
 import FormChildDetails from "./FormChildDetails";
 import FormAvatarUpload from "./FormAvatarUpload";
+import FormAvatarUploadChild from "./FormAvatarUploadChild";
 
 // import FormAvatarUpload from "./FormAvatarUpload";
 
@@ -77,7 +78,12 @@ export class UserForm extends Component {
                     />
                 )
             case 4:
-                return <FormAvatarUpload title="Kind"/>
+                return <FormAvatarUploadChild
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    updateChild={this.updateChild}
+                    values={this.state.child}
+                />
             case 5:
                 return <h1>Uw gegevens zijn succesvol verstuurd</h1>
         }
